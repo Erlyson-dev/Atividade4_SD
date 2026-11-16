@@ -1,7 +1,3 @@
-## Protocolo Requisição-Resposta sobre UDP — Sistemas Distribuídos
-
-Implementação prática do protocolo de comunicação **Requisição-Resposta** (*Request-Reply*) utilizando sockets com datagramas (**UDP**), desenvolvida como atividade da disciplina de **Sistemas Distribuídos** (baseada no modelo de George Coulouris).
-
 ## 1. Estrutura do Projeto
 
 * `mensagem.py` — Define as classes `RemoteRef` e `Message`, além do empacotamento e desempacotamento binário (`pack` / `unpack`).
