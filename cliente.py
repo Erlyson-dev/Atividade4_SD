@@ -32,6 +32,9 @@ class Client:
                     reply = unpack(data)
                 except socket.timeout:
                     break
+                except ConnectionResetError:
+                    time.sleep(max(0.0, deadline - time.monotonic()))
+                    break
                 except ValueError:
                     continue 
                 if reply.messageType == REPLY and reply.requestId == requestId:
