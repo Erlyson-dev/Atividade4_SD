@@ -12,14 +12,6 @@ def main():
     servidor = RemoteRef(host, port)
     client = Client()
 
-    print(f"Verificando servidor em {host}:{port}...")
-    try:
-        client.doOperation(servidor, operacoes.ECHO, b"ping")
-    except TimeoutError:
-        print(f"Erro: servidor inacessível em {host}:{port} (verifique se está rodando).")
-        client.close()
-        return
-
     print("Conectado! Comandos disponíveis:")
     print("  echo <texto>        -> repete o texto enviado")
     print("  sum <num1> <num2>   -> soma dois números inteiros")
